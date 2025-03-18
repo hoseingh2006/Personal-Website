@@ -1,5 +1,5 @@
 .main {
-    height: 200rem;
+    height: 400rem;
     width: 100%;
     background-color: #0f172a;
 }
@@ -245,13 +245,13 @@
     margin: 4px;
 }
 
-
-.section-about {
+.section-style {
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    margin-bottom: 50px;
 }
+
 
 
 
@@ -302,7 +302,7 @@
     width: 50%;
 }
 
-.section-about-flex-part-one p{
+.section-about-flex-part-one p {
     line-height: 2;
 }
 
@@ -315,7 +315,8 @@
     align-items: center;
     gap: 5px;
 }
-.section-about-flex-part-two-title img{
+
+.section-about-flex-part-two-title img {
     width: 30px;
     height: 30px;
 }
@@ -342,4 +343,97 @@
     font-weight: 400;
     letter-spacing: 1px;
 
+}
+
+
+
+
+
+
+/* section project */
+
+.section-Projects-card-box {
+    width: 70%;
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.section-Projects-card {
+    width: 40.6rem;
+    height: 40.8rem;
+    background-color: var(--color-mid-gray);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 15px;
+
+}
+
+.section-Projects-card-box-img {
+    width: 100%;
+    height: 16rem;
+    align-self: center;
+
+}
+
+.section-Projects-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.section-Projects-card-details {
+    color: var(--color-dark-gray);
+    font-weight: 400;
+}
+
+
+
+.title-card {
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+.section-Projects-card-link-box {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.section-Projects-card-demo {
+    text-decoration: none;
+    color: var(--color-dark-gray);
+    transition: all 0.3s;
+}
+
+.section-Projects-card-demo:hover {
+    color: var(--color-light-purpel);
+}
+
+.section-Projects-card-git {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+}
+
+.section-Projects-card-git img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.section-Projects-card-git:hover {
+    background-color: var(--color-light-purpel);
 }
