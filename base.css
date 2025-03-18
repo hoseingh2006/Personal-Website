@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "dana extrabold";
+    src: url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.eot");
+    src: url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.svg#dana extrabold")format("svg");
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 62.5%
+}
+
+
+body {
+    font-family: "dana extrabold";
+    direction: rtl;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.larg-font-size {
+    font-size: 5rem;
+}
+
+.middle-font-size {
+    font-size: 2.5rem;
+}
+
+.small-font-size {
+    font-size: 1.5rem;
+}
+
+.white {
+    color: var(--color-white);
+}
+
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-light-gray: #cccaca;
+    --color-light-purpel: #6366f1;
+    --color-dark-gray:#808ea3;
+    --color-mid-gray:#21293b;
+}
+
+.span-color span:last-child {
+    color: var(--color-light-purpel);
+    font-size: 7rem;
+}
+
+.mid-margin-y {
+    margin: 30px 0;
+}
