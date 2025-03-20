@@ -1,7 +1,7 @@
 .main {
-    height: 400rem;
+
     width: 100%;
-    background-color: #0f172a;
+
 }
 
 .header {
@@ -39,6 +39,7 @@
     transition: all 0.1s ease-in;
     cursor: pointer;
 }
+
 .navbar-static-li:first-child {
     padding: 8px 30px;
     border: 0.5px solid var(--color-dark-gray);
@@ -46,6 +47,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .navbar-static-li:first-child::after {
     position: absolute;
     content: '';
@@ -72,7 +74,7 @@
 
 }
 
-.navbar-static-li:hover{
+.navbar-static-li:hover {
     transform: scale(1.1);
 }
 
@@ -316,7 +318,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin: 100px 0px;
 }
 
 
@@ -504,3 +506,200 @@
 .section-Projects-card-git:hover {
     background-color: var(--color-light-purpel);
 }
+
+/* section-blog */
+
+
+.section-blog-card-box {
+    width: 70%;
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.section-blog-card {
+    width: 40.6rem;
+    height: 40.8rem;
+    background-color: var(--color-mid-gray);
+    border-radius: 15px;
+    position: relative;
+}
+
+.section-blog-card-insid {
+    position: absolute;
+    top: 40%;
+
+    color: var(--color-dark-gray);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 15px;
+}
+
+
+.section-blog-card-box-img {
+    width: 90%;
+    height: 18rem;
+    align-self: center;
+    position: absolute;
+    top: -7%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.section-blog-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.section-blog-card-demo {
+    padding: 12px 32px;
+    background-color: var(--color-main-gray);
+    text-decoration: none;
+    color: var(--color-white);
+    border-radius: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.section-blog-card-demo:hover {
+    background-color: var(--color-light-purpel);
+}
+
+/* ///////////////////////////////////////// */
+
+/* section contact */
+.section-contact-box {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin-top: 50px;
+}
+
+.section-contact-box-one,
+.section-contact-box-two {
+    width: 50%;
+}
+
+.section-contact-box-one {
+    color: var(--color-dark-gray);
+}
+
+.section-contact-link-main-box {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+
+.section-contact-link {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.section-contact-link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: var(--color-white);
+
+}
+
+.section-contact-link-box h4 {
+    color: var(--color-dark-gray);
+}
+
+.section-contact-link-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 4px;
+    background-color: var(--color-light-purpel);
+    border-radius: 6px;
+
+}
+
+.section-contact-box-two {}
+
+.section-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-contact-form-box {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-contact-form-input {
+    background-color: var(--color-mid-gray);
+    width: 100%;
+    height: 5rem;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'dana extrabold';
+}
+
+.section-contact-form-textare {
+    background-color: var(--color-mid-gray);
+    width: 100%;
+    height: 15rem;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'dana extrabold';
+}
+
+/* ///////////////////// */
+/* footer */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-licens {
+    color: var(--color-dark-gray);
+    font-family: monospace;
+}
+
+.footer-Status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+
+}
+
+.footer-Status-shap {
+    width: 50px;
+    height: 50px;
+    border-radius: 200px;
+    background-color: var(--color-dark-gray);
+    box-shadow: 0 0 4px var(--color-dark-gray);
+}
+
+.footer-Status-text {
+    font-size: 18px;
+    color: var(--color-dark-gray);
+    /* display: flex;
+    align-items: center; */
+}
+
+.footer-Status-text span {
+    color: var(--color-white);
+}
+
+/* ///////////////////// */

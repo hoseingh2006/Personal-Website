@@ -24,6 +24,8 @@ html {
 body {
     font-family: "dana extrabold";
     direction: rtl;
+    background-color: var(--color-main-gray);
+    padding-bottom: 20px;
 }
 
 button {
@@ -35,7 +37,9 @@ button {
 
 
 
-
+.main-font {
+    font-family: "dana extrabold";
+}
 
 
 
@@ -64,8 +68,10 @@ button {
     --color-black: #000;
     --color-light-gray: #cccaca;
     --color-light-purpel: #6366f1;
-    --color-dark-gray:#808ea3;
-    --color-mid-gray:#21293b;
+    --color-dark-gray: #808ea3;
+    --color-mid-gray: #21293b;
+    --color-main-gray: #0f172a;
+    --color-cub-gray: #6b90bd;
 }
 
 .span-color span:last-child {
@@ -77,23 +83,74 @@ button {
     margin: 30px 0;
 }
 
-.active{
+.active {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translate(-50%, 0%) !important;
 }
 
-.disable{
+.disable {
     opacity: 0 !important;
     visibility: hidden !important;
     transform: translate(-50%, -250%) !important;
 }
+
 .animation-fade {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(20px) scale(0.9);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
+
 .animation-fade.true {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+}
+
+.main-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--color-light-purpel);
+    text-decoration: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    color: var(--color-white);
+}
+
+input::placeholder {
+    color: var(--color-dark-gray);
+    font-weight: 300;
+}
+
+input:active {
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    border: none;
+    color: var(--color-white);
+}
+
+textarea::placeholder {
+    color: var(--color-dark-gray);
+    font-weight: 300;
+}
+
+textarea:active {
+    box-shadow: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+label {
+    color: var(--color-dark-gray);
 }
