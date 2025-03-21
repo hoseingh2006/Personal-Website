@@ -54,7 +54,7 @@ cards.forEach(card => {
 
         const innerElement = card.querySelector('.inner-element');
         innerElement.style.transform = `
-            translateZ(100px) /* بیرون‌زدگی بیشتر */
+            translateZ(100px) 
             scale(${1 + Math.abs(deltaX) * 0.3}, ${1 + Math.abs(deltaY) * 0.3})
         `;
     });
@@ -63,5 +63,35 @@ cards.forEach(card => {
         card.style.transform = 'rotateY(0deg) rotateX(0deg)';
         const innerElement = card.querySelector('.inner-element');
         innerElement.style.transform = 'translateZ(30px) scale(1, 1)';
+    });
+});
+
+
+///////////////////
+
+const blogCards = document.querySelectorAll('.section-blog-card');
+
+
+blogCards.forEach(card => {
+    const imgBox = card.querySelector('.section-blog-card-box-img');
+    const img = card.querySelector('.section-blog-card-img');
+
+    imgBox.addEventListener('mousemove', (e) => {
+
+        const rect = imgBox.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const mouseX = e.clientX;
+
+        const deltaX = (mouseX - centerX) / (rect.width / 2);
+        img.style.transform = `
+        translateX(15px)
+            translateX(${deltaX * 15}px)
+        `;
+        img.style.filter = 'brightness(0.5)';
+    });
+
+    imgBox.addEventListener('mouseleave', () => {
+        img.style.transform = 'translateX(0)';
+        img.style.filter = 'brightness(1)';
     });
 });
