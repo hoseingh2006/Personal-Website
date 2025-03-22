@@ -429,23 +429,22 @@
     margin-top: 50px;
     flex-wrap: wrap;
     justify-content: center;
-    perspective: 1000px;
+    perspective: 3000px;
 }
 
 
 .section-Projects-card {
     width: 40.6rem;
-    height: 40.8rem;
+    height: 41.8rem;
     background-color: var(--color-mid-gray);
     border-radius: 15px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    padding: 20px 30px;
+    padding: 15px 30px;
     gap: 15px;
     transition: all 0.3s ease-out;
     transform-style: preserve-3d;
-    position: relative;
 }
 
 
@@ -465,7 +464,6 @@
 
 .section-Projects-card-details {
     color: var(--color-dark-gray);
-    font-weight: 400;
     transform: translateZ(20px);
     transition: transform 0.3s ease-out;
 }
@@ -477,6 +475,7 @@
     align-self: center;
     transform: translateZ(40px);
     transition: transform 0.3s ease-out;
+
 }
 
 
@@ -554,7 +553,8 @@
 .section-blog-card-box {
     width: 70%;
     display: flex;
-    gap: 50px;
+    column-gap: 50px;
+    row-gap: 100px;
     margin-top: 50px;
     flex-wrap: wrap;
     justify-content: center;
@@ -661,10 +661,13 @@
     gap: 7px;
     color: var(--color-white);
 
+
 }
 
 .section-contact-link-box h4 {
     color: var(--color-dark-gray);
+    letter-spacing: 2px;
+    font-family: serif;
 }
 
 .section-contact-link-icon {
@@ -675,8 +678,6 @@
     border-radius: 6px;
 
 }
-
-.section-contact-box-two {}
 
 .section-contact-form {
     display: flex;
@@ -721,7 +722,7 @@
 
 .footer-licens {
     color: var(--color-dark-gray);
-    font-family: monospace;
+    font-family: serif;
 }
 
 .footer-Status {
@@ -744,12 +745,16 @@
 .footer-Status-text {
     font-size: 18px;
     color: var(--color-dark-gray);
+
     /* display: flex;
     align-items: center; */
 }
 
 .footer-Status-text span {
     color: var(--color-white);
+    font-family: 'dana extrabold';
+    display: block;
+    height: 25px;
 }
 
 /* ///////////////////// */

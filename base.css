@@ -1,11 +1,86 @@
 @font-face {
-    font-family: "dana extrabold";
-    src: url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.eot");
-    src: url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.eot?#iefix")format("embedded-opentype"),
-        url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.woff2")format("woff2"),
-        url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.woff")format("woff"),
-        url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.ttf")format("truetype"),
-        url("https://db.onlinewebfonts.com/t/79bab44c18be57b673195ca27bf10743.svg#dana extrabold")format("svg");
+    font-family: 'dana extrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana extrabold'), url('font/dana\ extrabold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'dana regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana regular'), url('font/dana\ regular.woff') format('woff');
+}
+
+
+
+@font-face {
+    font-family: 'dana thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana thin'), url('font/dana\ thin.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'dana extralight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana extralight'), url('font/dana\ extralight.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'dana light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana light'), url('font/dana\ light.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'dana medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana medium'), url('font/dana\ medium.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'dana demibold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana demibold'), url('font/dana\ demibold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'dana bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana bold'), url('font/dana\ bold.woff') format('woff');
+}
+
+
+
+@font-face {
+    font-family: 'dana black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana black'), url('font/dana\ black.woff') format('woff');
+}
+
+.font-bold {
+    font-family: 'dana extrabold' !important;
+}
+
+.font-regular {
+    font-family: 'dana regular' !important;
+    line-height: 2;
+}
+
+.font-medium {
+    font-family: 'dana medium' !important;
 }
 
 *,
@@ -17,7 +92,8 @@
 }
 
 html {
-    font-size: 62.5%
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 
@@ -26,7 +102,11 @@ body {
     direction: rtl;
     background-color: var(--color-main-gray);
     padding-bottom: 20px;
+
+
 }
+
+
 
 button {
     background: none;
@@ -57,6 +137,7 @@ button {
 
 .small-font-size {
     font-size: 1.5rem;
+    font-weight: 800;
 }
 
 .white {
