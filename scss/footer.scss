@@ -1,0 +1,44 @@
+@use 'variables'as *;
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-licens {
+        color: $color-dark-gray;
+        font-family: serif;
+    }
+
+    &-Status {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+
+        &-shap {
+            width: 50px;
+            height: 50px;
+            border-radius: 200px;
+            background-color: $color-dark-gray;
+            box-shadow: 0 0 4px $color-dark-gray;
+        }
+
+        &-text {
+            font-size: 18px;
+            color: $color-dark-gray;
+
+            /* display: flex;
+            align-items: center; */
+            & span {
+                color: $color-white;
+                font-family: 'dana extrabold';
+                display: block;
+                height: 25px;
+            }
+        }
+
+    }
+
+
+}

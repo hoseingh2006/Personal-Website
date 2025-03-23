@@ -1,0 +1,45 @@
+@use 'variables'as *;
+
+@font-face {
+    font-family: 'dana extrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana extrabold'), url('../font/dana\ extrabold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'dana regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('dana regular'), url('../font/dana\ regular.woff') format('woff');
+}
+
+.font {
+    &-bold {
+        font-family: 'dana extrabold' !important;
+    }
+
+    &-regular {
+        font-family: 'dana regular' !important;
+        line-height: 2;
+    }
+
+    &-medium {
+        font-family: 'dana medium' !important;
+    }
+
+    &-size {
+        &-larg {
+            font-size: 5rem;
+        }
+
+        &-middle {
+            font-size: 2.5rem;
+        }
+
+        &-small {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+    }
+}

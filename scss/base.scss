@@ -1,0 +1,95 @@
+@use 'variables'as *;
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "dana extrabold";
+    direction: rtl;
+    background-color: $color-main-gray;
+    padding-bottom: 20px;
+
+
+}
+
+
+.white {
+    color: $color-white;
+}
+
+
+
+.main {
+    width: 100%;
+
+}
+
+.mid-margin-y {
+    margin: 30px 0;
+}
+
+
+
+
+
+.section {
+    &-style {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px 0px;
+    }
+
+    &-title {
+        color: $color-white;
+        display: flex;
+        height: 80px;
+
+        & span {
+            cursor: pointer;
+
+            &:hover {
+                animation-name: section-title-animation;
+                animation-duration: 0.5s;
+                color: $color-light-purpel;
+            }
+        }
+
+        &-card {
+            font-size: 2rem;
+            color: $color-white;
+            transform: translateZ(30px);
+            transition: transform 0.3s ease-out;
+        }
+    }
+}
+
+.title-card {
+    font-size: 2rem;
+    color: $color-white;
+    transform: translateZ(30px);
+    transition: transform 0.3s ease-out;
+}
+
+.secend-title_text {
+    color: $color-light-gray;
+}
+
+.span-color span:last-child {
+    color: $color-light-purpel;
+    font-size: 7rem;
+}

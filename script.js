@@ -1,12 +1,14 @@
+///scroll-smooth-com
+
 document.addEventListener('scroll', (event) => {
     var a = window.scrollY
     if (a > 80) {
-        document.getElementById('navbar-static').classList.add('active')
-        document.getElementById('navbar-static').classList.remove('disable')
+        document.getElementById('header-navbar-static').classList.add('active')
+        document.getElementById('header-navbar-static').classList.remove('disable')
     }
     if (a < 80) {
-        document.getElementById('navbar-static').classList.remove('active')
-        document.getElementById('navbar-static').classList.add('disable')
+        document.getElementById('header-navbar-static').classList.remove('active')
+        document.getElementById('header-navbar-static').classList.add('disable')
     }
 })
 const contents = document.querySelectorAll('.animation-fade');
@@ -26,7 +28,7 @@ contents.forEach((content) => {
 });
 
 
-// ////////////////////////////////////
+// ////////////////////////////////////animation--Projects-card
 
 
 let cards = document.querySelectorAll('.section-Projects-card')
@@ -71,13 +73,13 @@ cards.forEach(card => {
 });
 
 
-///////////////////
+///////////////////animation-blog-card
 
 const blogCards = document.querySelectorAll('.section-blog-card');
 
 
 blogCards.forEach(card => {
-    const imgBox = card.querySelector('.section-blog-card-box-img');
+    const imgBox = card.querySelector('.section-blog-card-img-box');
     const img = card.querySelector('.section-blog-card-img');
 
     imgBox.addEventListener('mousemove', (e) => {
@@ -101,10 +103,10 @@ blogCards.forEach(card => {
     });
 });
 
+// scroll animation
 
 
-
-document.querySelectorAll('.navbar-static-ul a, .header-nav-ul a').forEach(anchor => {
+document.querySelectorAll('.header-navbar-static-ul a, .header-navbar-static-ul a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -118,7 +120,6 @@ document.querySelectorAll('.navbar-static-ul a, .header-nav-ul a').forEach(ancho
             const duration = 500;
             let startTime = null;
 
-            // تابع انیمیشن
             function animation(currentTime) {
                 if (startTime === null) startTime = currentTime;
                 const timeElapsed = currentTime - startTime;
@@ -127,7 +128,6 @@ document.querySelectorAll('.navbar-static-ul a, .header-nav-ul a').forEach(ancho
                 if (timeElapsed < duration) requestAnimationFrame(animation);
             }
 
-            // تابع easing برای حرکت نرم
             function ease(t, b, c, d) {
                 t /= d / 2;
                 if (t < 1) return c / 2 * t * t + b;
@@ -135,7 +135,7 @@ document.querySelectorAll('.navbar-static-ul a, .header-nav-ul a').forEach(ancho
                 return -c / 2 * (t * (t - 2) - 1) + b;
             }
 
-            // شروع انیمیشن
+
             requestAnimationFrame(animation);
         }
     });

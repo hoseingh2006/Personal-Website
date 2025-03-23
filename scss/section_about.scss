@@ -1,0 +1,55 @@
+@use 'variables'as *;
+
+.section-about {
+    &-flex-part {
+        display: flex;
+        width: 75%;
+        margin-top: 100px;
+        gap: 10%;
+
+        &-one,
+        &-two {
+            width: 50%;
+        }
+
+        &-one p {
+            line-height: 2;
+        }
+
+        &-two-title {
+            color: $color-white;
+            margin-top: -5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            & img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &-skill-box {
+        width: 13rem;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-mid-gray;
+        color: $color-dark-gray;
+        border-radius: 100px;
+        font-family: sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+
+        &-main {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            row-gap: 15px;
+        }
+    }
+}

@@ -1,0 +1,118 @@
+@use 'variables'as *;
+
+.section-Projects {
+    &-card {
+        width: 40.6rem;
+        height: 41.8rem;
+        background-color: $color-mid-gray;
+        border-radius: 15px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 30px;
+        gap: 15px;
+        transition: all 0.3s ease-out;
+        transform-style: preserve-3d;
+
+        &:hover {
+            transform: translateZ(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        &-box {
+            width: 70%;
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            perspective: 3000px;
+
+
+        }
+
+
+
+
+        &-details {
+            color: $color-dark-gray;
+            transform: translateZ(20px);
+            transition: transform 0.3s ease-out;
+        }
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-out;
+
+            &-box {
+                width: 100%;
+                height: 16rem;
+                align-self: center;
+                transform: translateZ(40px);
+                transition: transform 0.3s ease-out;
+
+
+
+            }
+        }
+
+        &-link {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transform: translateZ(30px);
+            transition: transform 0.3s ease-out;
+
+            &-demo {
+                text-decoration: none;
+                color: $color-dark-gray;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: $color-light-purpel;
+                }
+            }
+
+            &-git {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: $color-light-purpel;
+                }
+
+                & img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+
+        &:hover .title-card {
+            transform: translateZ(60px);
+        }
+
+        &:hover &-details {
+            transform: translateZ(50px);
+        }
+
+        &:hover &-box-img {
+            transform: translateZ(70px);
+        }
+
+        &:hover &-link {
+            transform: translateZ(60px);
+        }
+
+        &:hover &-img {
+            transform: scale(1.1);
+        }
+    }
+}

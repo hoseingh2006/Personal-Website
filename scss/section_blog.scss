@@ -1,0 +1,72 @@
+@use 'variables'as *;
+
+
+.section-blog {
+
+    &-card {
+        width: 40.6rem;
+        height: 40.8rem;
+        background-color: $color-mid-gray;
+        border-radius: 15px;
+        position: relative;
+
+        &-box {
+            width: 70%;
+            display: flex;
+            column-gap: 50px;
+            row-gap: 100px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 5rem;
+
+        }
+
+        &-img {
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            transform: translateX(15px);
+
+            transition: transform 0.1s ease-out, filter 0.1s ease-out;
+
+
+
+            &-box {
+                width: 90%;
+                height: 18rem;
+                position: absolute;
+                top: -7%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                overflow: hidden;
+
+                border-radius: 10px;
+            }
+        }
+
+        &-insid {
+            position: absolute;
+            top: 40%;
+            color: $color-dark-gray;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 20px 30px;
+            gap: 15px;
+
+            &-demo {
+                padding: 12px 32px;
+                background-color: $color-main-gray;
+                text-decoration: none;
+                color: $color-white;
+                border-radius: 10px;
+                transition: all 0.3s ease-in;
+
+                &:hover {
+                    background-color: $color-light-purpel;
+                }
+            }
+        }
+    }
+}

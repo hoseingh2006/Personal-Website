@@ -1,0 +1,60 @@
+@use 'variables'as *;
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.main-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: $color-light-purpel;
+    text-decoration: none;
+    color: $color-white;
+    cursor: pointer;
+    font-family: 'dana extrabold';
+}
+
+.btn-contact {
+    border-radius: 7px;
+    background-color: $color-light-purpel;
+    width: 17rem;
+    height: 4.5rem;
+    color: $color-white;
+    box-shadow: none;
+    font-family: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.btn-contact span {
+    height: 45px;
+    font-size: 30px;
+    background-clip: text;
+    color: transparent;
+    background-color: white;
+
+
+}
+
+.btn-contact:hover span {
+    animation-name: btn-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    background-clip: text;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.btn-contact:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 3px $color-light-purpel;
+}

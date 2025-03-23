@@ -1,0 +1,43 @@
+@use 'variables'as *;
+
+input {
+    border: none;
+    color: $color-white;
+
+    &::placeholder {
+        color: $color-dark-gray;
+        font-weight: 300;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+textarea {
+    border: none;
+    color: $color-white;
+
+    &::placeholder {
+        color: $color-dark-gray;
+        font-weight: 300;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+label {
+    color: $color-dark-gray;
+}
