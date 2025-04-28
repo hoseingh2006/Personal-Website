@@ -27,19 +27,19 @@ body {
 }
 
 .mid-margin-y {
-  margin: 30px 0;
+  margin: 3rem 0;
 }
 
 .section-style {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 50px 0px;
+  margin: 5rem 0px;
 }
 .section-title {
   color: #fff;
   display: flex;
-  height: 80px;
+  height: 8rem;
 }
 .section-title span {
   cursor: pointer;
@@ -103,6 +103,7 @@ body {
 .font-size-small {
   font-size: 1.5rem;
   font-weight: 800;
+  line-height: 2;
 }
 
 button {
@@ -113,8 +114,8 @@ button {
 }
 
 .main-btn {
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
   background-color: #6366f1;
   text-decoration: none;
   color: #fff;
@@ -134,13 +135,12 @@ button {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 .btn-contact span {
-  height: 45px;
-  font-size: 30px;
+  font-size: 3rem;
   background-clip: text;
   color: transparent;
   background-color: white;
@@ -164,15 +164,24 @@ button {
 .header {
   margin-bottom: 5rem;
 }
+.header-navbar-humberger-btn {
+  width: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  height: 40px;
+  color: white;
+  border-radius: 200px;
+  font-family: serif;
+  display: none;
+}
 .header-navbar-static {
-  width: 35%;
-  height: 70px;
+  height: 7rem;
   border-radius: 100px;
   background-color: aliceblue;
   position: fixed;
   top: 3%;
   left: 50%;
-  padding: 10px;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   z-index: 999;
@@ -190,9 +199,9 @@ button {
   cursor: pointer;
 }
 .header-navbar-static-li:first-child {
-  padding: 8px 30px;
+  padding: 8px 3rem;
   border: 0.5px solid #808ea3;
-  border-radius: 30px;
+  border-radius: 3rem;
   overflow: hidden;
   position: relative;
 }
@@ -200,19 +209,22 @@ button {
   position: absolute;
   content: "";
   display: inline-block;
-  width: 100px;
-  height: 50px;
+  width: 10rem;
+  height: 5rem;
   background-color: #6366f1;
   filter: blur(0.5px);
   bottom: -22px;
   left: 50%;
   transform: translate(-50%, 50%);
-  border-radius: 100px;
+  border-radius: 10rem;
 }
 .header-navbar-static-li a {
   text-decoration: none;
   color: #808ea3;
   transition: all 0.1s ease-in;
+}
+.header-navbar-static-li a i {
+  display: none;
 }
 .header-navbar-static-li:hover {
   transform: scale(1.1);
@@ -263,28 +275,13 @@ button {
   color: #6366f1;
 }
 
-.gridline {
-  background-image: url("../img/grid.png");
-  background-size: 18%;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.1;
-  filter: grayscale(1);
-}
-
-.gridline-box {
-  width: 100%;
-  height: 100vh;
-}
-
 .section-home-box {
-  position: absolute;
-  top: 20rem;
-  left: 0%;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
+  padding-top: 10rem;
+  height: 100vh;
 }
 .section-home-box-title-box {
   display: grid;
@@ -404,7 +401,7 @@ button {
 .section-about-flex-part {
   display: flex;
   width: 75%;
-  margin-top: 100px;
+  margin-top: 10rem;
   gap: 10%;
 }
 .section-about-flex-part-one, .section-about-flex-part-two {
@@ -421,44 +418,44 @@ button {
   gap: 5px;
 }
 .section-about-flex-part-two-title img {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
 }
 .section-about-skill-box {
   width: 13rem;
-  height: 35px;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #21293b;
   color: #808ea3;
-  border-radius: 100px;
+  border-radius: 10rem;
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 1px;
 }
 .section-about-skill-box-main {
-  margin-top: 20px;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  row-gap: 15px;
+  gap: 1rem;
+  row-gap: 1.5rem;
 }
 
 .section-blog-card {
   width: 40.6rem;
   height: 40.8rem;
   background-color: #21293b;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   position: relative;
 }
 .section-blog-card-box {
   width: 70%;
   display: flex;
-  column-gap: 50px;
-  row-gap: 100px;
-  margin-top: 50px;
+  column-gap: 5rem;
+  row-gap: 10rem;
+  margin-top: 5rem;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 5rem;
@@ -487,15 +484,15 @@ button {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 20px 30px;
+  padding: 2rem 3rem;
   gap: 15px;
 }
 .section-blog-card-insid-demo {
-  padding: 12px 32px;
+  padding: 1.2rem 3.2rem;
   background-color: #0f172a;
   text-decoration: none;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 1rem;
   transition: all 0.3s ease-in;
 }
 .section-blog-card-insid-demo:hover {
@@ -506,24 +503,24 @@ button {
   width: 40.6rem;
   height: 41.8rem;
   background-color: #21293b;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 15px 30px;
-  gap: 15px;
+  padding: 1.5rem 3rem;
+  gap: 1.5rem;
   transition: all 0.3s ease-out;
   transform-style: preserve-3d;
 }
 .section-Projects-card:hover {
   transform: translateZ(20px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
 }
 .section-Projects-card-box {
   width: 70%;
   display: flex;
-  gap: 50px;
-  margin-top: 50px;
+  gap: 5em;
+  margin-top: 5rem;
   flex-wrap: wrap;
   justify-content: center;
   perspective: 3000px;
@@ -536,7 +533,8 @@ button {
 .section-Projects-card-img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 1rem;
+  object-fit: cover;
   transition: transform 0.3s ease-out;
 }
 .section-Projects-card-img-box {
@@ -548,7 +546,7 @@ button {
 }
 .section-Projects-card-link {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -567,7 +565,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 1rem;
   transition: all 0.3s;
 }
 .section-Projects-card-link-git:hover {
@@ -595,11 +593,11 @@ button {
 
 .section-contact-box {
   display: flex;
-  gap: 50px;
+  gap: 5rem;
   align-items: center;
   justify-content: center;
   width: 75%;
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 .section-contact-box-one, .section-contact-box-two {
   width: 50%;
@@ -609,13 +607,13 @@ button {
 }
 .section-contact-box-one-link {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
   align-items: flex-start;
 }
 .section-contact-box-one-link-box {
   display: flex;
-  gap: 30px;
-  margin-top: 50px;
+  gap: 3rem;
+  margin-top: 5rem;
   flex-direction: column;
 }
 .section-contact-box-one-link-box-sub {
@@ -639,21 +637,21 @@ button {
 .section-contact-box-two-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
 }
 .section-contact-box-two-form-box {
   display: flex;
   align-items: start;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
 }
 .section-contact-box-two-form-input {
   background-color: #21293b;
   width: 100%;
   height: 5rem;
   padding: 8px;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 1rem;
+  font-size: 2rem;
   font-family: "dana extrabold";
 }
 .section-contact-box-two-form-textare {
@@ -661,8 +659,8 @@ button {
   width: 100%;
   height: 15rem;
   padding: 8px;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 1rem;
+  font-size: 2rem;
   font-family: "dana extrabold";
 }
 
@@ -704,6 +702,7 @@ label {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 .footer-licens {
   color: #808ea3;
@@ -712,18 +711,18 @@ label {
 .footer-Status {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
   text-decoration: none;
 }
 .footer-Status-shap {
-  width: 50px;
-  height: 50px;
-  border-radius: 200px;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 20rem;
   background-color: #808ea3;
   box-shadow: 0 0 4px #808ea3;
 }
 .footer-Status-text {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #808ea3;
   /* display: flex;
   align-items: center; */
@@ -732,7 +731,127 @@ label {
   color: #fff;
   font-family: "dana extrabold";
   display: block;
-  height: 25px;
+  height: 2.5rem;
+}
+
+@media only screen and (max-width: 1300px) {
+  .section-Projects-card-box {
+    width: 100%;
+  }
+  .section-blog-card-box {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .section-home-box-profile {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  .section-Projects-card-box {
+    perspective: none;
+  }
+  .section-home-box-title-box {
+    display: block;
+    justify-items: center;
+    padding: 0px 5rem;
+  }
+  .section-home-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .section-about-flex-part {
+    width: 90%;
+  }
+  html {
+    font-size: 60%;
+  }
+  .header {
+    margin: 0px;
+  }
+  .header-navbar-static-li a p {
+    display: none;
+  }
+  .header-navbar-static-li a i {
+    display: inline-block;
+  }
+  .header-navbar-static-ul {
+    gap: 3rem;
+  }
+  .header-navbar-box-top {
+    width: 100%;
+  }
+  .header-navbar-humberger-btn {
+    display: block;
+  }
+  .header-navbar-box-bottom {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+  .header-navbar-static-li:first-child::after {
+    bottom: -20px;
+  }
+  .gridline {
+    background-image: url("../img/grid.png");
+    background-size: 150%;
+  }
+  .section-about-flex-part {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+  }
+  .section-about-flex-part-one,
+  .section-about-flex-part-two {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .section-contact-box {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .section-contact-box-one,
+  .section-contact-box-two {
+    width: 90%;
+  }
+  .section-contact-box-one-link-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  body {
+    padding-bottom: 0px;
+  }
+  .section-about-skill-box-main {
+    justify-content: center;
+  }
+  .section-style {
+    margin: 0px 0px 10rem;
+  }
+  .btn-contact {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .section-home-box-title-box {
+    padding: 0px 1.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 47%;
+  }
+  .header-navbar-static-li:first-child::after {
+    bottom: -16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

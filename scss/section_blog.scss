@@ -7,15 +7,15 @@
         width: 40.6rem;
         height: 40.8rem;
         background-color: $color-mid-gray;
-        border-radius: 15px;
+        border-radius: 1.5rem;
         position: relative;
 
         &-box {
             width: 70%;
             display: flex;
-            column-gap: 50px;
-            row-gap: 100px;
-            margin-top: 50px;
+            column-gap: 5rem;
+            row-gap: 10rem;
+            margin-top: 5rem;
             flex-wrap: wrap;
             justify-content: center;
             margin-bottom: 5rem;
@@ -52,15 +52,15 @@
             display: flex;
             align-items: flex-start;
             flex-direction: column;
-            padding: 20px 30px;
+            padding: 2rem 3rem;
             gap: 15px;
 
             &-demo {
-                padding: 12px 32px;
+                padding: 1.2rem 3.2rem;
                 background-color: $color-main-gray;
                 text-decoration: none;
                 color: $color-white;
-                border-radius: 10px;
+                border-radius: 1rem;
                 transition: all 0.3s ease-in;
 
                 &:hover {

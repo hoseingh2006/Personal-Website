@@ -39,7 +39,7 @@ body {
 }
 
 .mid-margin-y {
-    margin: 30px 0;
+    margin: 3rem 0;
 }
 
 
@@ -51,13 +51,13 @@ body {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin: 50px 0px;
+        margin: 5rem 0px;
     }
 
     &-title {
         color: $color-white;
         display: flex;
-        height: 80px;
+        height: 8rem;
 
         & span {
             cursor: pointer;

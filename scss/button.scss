@@ -8,8 +8,8 @@ button {
 }
 
 .main-btn {
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
     background-color: $color-light-purpel;
     text-decoration: none;
     color: $color-white;
@@ -29,14 +29,14 @@ button {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 20px;
+    font-size: 2rem;
     cursor: pointer;
 
 }
 
 .btn-contact span {
-    height: 45px;
-    font-size: 30px;
+    // height: 4.5rem;
+    font-size: 3rem;
     background-clip: text;
     color: transparent;
     background-color: white;

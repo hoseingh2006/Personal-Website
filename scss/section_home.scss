@@ -4,13 +4,15 @@
 .section-home {
 
     &-box {
-        position: absolute;
-        top: 20rem;
-        left: 0%;
+        // position: absolute;
+        // top: 32%;
+        // left: 0%;
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
         width: 100%;
+        padding-top: 10rem;
+        height: 100vh;
 
         &-title {
 

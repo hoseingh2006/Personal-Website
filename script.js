@@ -28,80 +28,104 @@ contents.forEach((content) => {
 });
 
 
-// ////////////////////////////////////animation--Projects-card
+
+function handleProjectsCardsAnimations(isDesktop) {
+    const cards = document.querySelectorAll('.section-Projects-card');
 
 
-let cards = document.querySelectorAll('.section-Projects-card')
+    if (isDesktop) {
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
 
-cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        // موقعیت موس نسبت به مرکز کارت
-        const rect = card.getBoundingClientRect();
-        console.log('rect.left:', rect.left)
-        console.log('rect.width:', rect.width)
-        console.log('rect.top:', rect.top)
-        console.log('rect.height:', rect.height)
-        console.log(' mouseX:', e.clientX)
-        console.log(' mouseY:', e.clientY)
+                const deltaX = (mouseX - centerX) / (rect.width / 2);
+                const deltaY = (mouseY - centerY) / (rect.height / 2);
 
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
+                card.style.transform = `
+                    rotateY(${deltaX * 15}deg)
+                    rotateX(${-deltaY * 15}deg)
+                `;
 
+                const innerElement = card.querySelector('.inner-element');
+                if (innerElement) {
+                    innerElement.style.transform = `
+                        translateZ(100px)
+                        scale(${1 + Math.abs(deltaX) * 0.3}, ${1 + Math.abs(deltaY) * 0.3})
+                    `;
+                }
+            });
 
-        const deltaX = (mouseX - centerX) / (rect.width / 2);
-        const deltaY = (mouseY - centerY) / (rect.height / 2);
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+                const innerElement = card.querySelector('.inner-element');
+                if (innerElement) {
+                    innerElement.style.transform = 'translateZ(30px) scale(1, 1)';
+                }
+            });
+        });
+    }
+}
 
-        card.style.transform = `
-            rotateY(${deltaX * 15}deg)
-            rotateX(${-deltaY * 15}deg)
-        `;
+function handleBlogCardsAnimations(isDesktop) {
+    const blogCards = document.querySelectorAll('.section-blog-card');
 
-        const innerElement = card.querySelector('.inner-element');
-        innerElement.style.transform = `
-            translateZ(100px)
-            scale(${1 + Math.abs(deltaX) * 0.3}, ${1 + Math.abs(deltaY) * 0.3})
-        `;
+    blogCards.forEach(card => {
+        const imgBox = card.querySelector('.section-blog-card-img-box');
+        const img = card.querySelector('.section-blog-card-img');
+
+        if (imgBox && img) {
+            imgBox.replaceWith(imgBox.cloneNode(true));
+            img.replaceWith(img.cloneNode(true));
+        }
     });
 
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(0) scale(1)';
-        const innerElement = card.querySelector('.inner-element');
-        innerElement.style.transform = 'translateZ(30px) scale(1, 1)';
+    if (isDesktop) {
+        blogCards.forEach(card => {
+            const imgBox = card.querySelector('.section-blog-card-img-box');
+            const img = card.querySelector('.section-blog-card-img');
+
+            if (imgBox && img) {
+                imgBox.addEventListener('mousemove', (e) => {
+                    const rect = imgBox.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const mouseX = e.clientX;
+
+                    const deltaX = (mouseX - centerX) / (rect.width / 2);
+                    img.style.transform = `
+                        translateX(15px)
+                        translateX(${deltaX * 15}px)
+                    `;
+                    img.style.filter = 'brightness(0.5)';
+                });
+
+                imgBox.addEventListener('mouseleave', () => {
+                    img.style.transform = 'translateX(15px)';
+                    img.style.filter = 'brightness(1)';
+                });
+            }
+        });
+    }
+}
+
+
+function checkScreenSize() {
+    const mediaQuery = window.matchMedia('(min-width: 992px)');
+
+    handleProjectsCardsAnimations(mediaQuery.matches);
+    handleBlogCardsAnimations(mediaQuery.matches);
+
+    mediaQuery.addListener((e) => {
+        handleProjectsCardsAnimations(e.matches);
+        handleBlogCardsAnimations(e.matches);
     });
-});
+}
 
-
-///////////////////animation-blog-card
-
-const blogCards = document.querySelectorAll('.section-blog-card');
-
-
-blogCards.forEach(card => {
-    const imgBox = card.querySelector('.section-blog-card-img-box');
-    const img = card.querySelector('.section-blog-card-img');
-
-    imgBox.addEventListener('mousemove', (e) => {
-
-        const rect = imgBox.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const mouseX = e.clientX;
-
-
-        const deltaX = (mouseX - centerX) / (rect.width / 2);
-        img.style.transform = `
-        translateX(15px)
-            translateX(${deltaX * 15}px)
-        `;
-        img.style.filter = 'brightness(0.5)';
-    });
-
-    imgBox.addEventListener('mouseleave', () => {
-        img.style.transform = 'translateX(15px)';
-        img.style.filter = 'brightness(1)';
-    });
-});
+document.addEventListener('DOMContentLoaded', checkScreenSize);
+window.addEventListener('resize', checkScreenSize);
 
 // scroll animation
 

@@ -6,23 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/44837f82d7.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 
 <body id="home">
     <main class="main">
-        <div class="gridline-box">
+        <!-- <div class="gridline-box">
             <div class="gridline"></div>
-        </div>
+        </div> -->
         <header class="header">
             <div id="header-navbar-static" class="header-navbar-static disable">
                 <ul class="header-navbar-static-ul">
-                    <li class="header-navbar-static-li font-size-small"><a href="#home">خانه</a></li>
-                    <li class="header-navbar-static-li font-size-small"><a href="#about">درباره من</a></li>
-                    <li class="header-navbar-static-li font-size-small"><a href="#projects">پروژه ها</a></li>
-                    <li class="header-navbar-static-li font-size-small"><a href="#blog">وبلاگ ها</a></li>
-                    <li class="header-navbar-static-li font-size-small"><a href="#contact">ارتباط با من</a></li>
+                    <li class="header-navbar-static-li font-size-small"><a href="#home">
+                            <i class='fas fa-home'></i>
+                            <p>خانه</p>
+                        </a></li>
+                    <li class="header-navbar-static-li font-size-small"><a href="#about">
+                            <i class='fas fa-user-alt'></i>
+                            <p>درباره من</p>
+                        </a></li>
+                    <li class="header-navbar-static-li font-size-small"><a href="#projects">
+                            <i class='fas fa-code'></i>
+                            <p>پروژه ها</p>
+                        </a></li>
+                    <li class="header-navbar-static-li font-size-small"><a href="#blog">
+                            <i class='far fa-file-alt'></i>
+                            <p>وبلاگ ها</p>
+                        </a></li>
+                    <li class="header-navbar-static-li font-size-small"><a href="#contact">
+                            <i class='fas fa-phone-alt'></i>
+                            <p>ارتباط با من</p>
+                        </a></li>
 
                 </ul>
             </div>
@@ -30,6 +46,13 @@
                 <div class="header-navbar-box-logo">
                     <img class="header-navbar-box-logo-image" src="img/logo.png" alt="Logo">
                 </div>
+                <button class="header-navbar-humberger-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <!-- <div class="header-navbar-humberger-box">
+
+                </div> -->
+
                 <div class="header-navbar-box-bottom">
                     <ul class="header-navbar-box-bottom-ul">
                         <li class="header-navbar-box-bottom-li font-size-small"><a href="#home">خانه</a></li>
@@ -42,26 +65,27 @@
 
             </div>
             <div class="section-home-linear_light"></div>
-            <div class="section-home-box">
-                <div class="section-home-box-title-box">
-                    <h1 id="h1name" class="section-home-box-title-text font-size-larg span-color">سلام من
-                        حسینم<span>.</span></h1>
-                    <h2 class="font-size-middle section-home-box-title-text-sub">یه تازه کار <span> برنامه نویسی فول
-                            استک</span></h2>
-                    <h3 class="font-size-small secend-title_text mid-margin-y ">در چند سال گذشته درگیر یاد
-                        گیری فرانت اند
-                        و بعد از اون بک
-                        اند و
-                        چالش
-                        هایی که تو حوضه فول استک سراغم اومد. <br> هر روز قوی تر از دیروز برای یادگیری
-                        بیشتر<span>&#128170</span></h3>
-                    <button class="btn-contact font-size-middle font-regular">ارتباط با من<span>&#11013;</span></button>
-                </div>
-                <div class="section-home-box-profile">
-                    <img class="section-home-box-profile-image" src="img/Untitled design (2).png" alt="my image">
-                </div>
-            </div>
+
         </header>
+        <div class="section-home-box">
+            <div class="section-home-box-title-box">
+                <h1 id="h1name" class="section-home-box-title-text font-size-larg span-color">سلام من
+                    حسینم<span>.</span></h1>
+                <h2 class="font-size-middle section-home-box-title-text-sub">یه تازه کار <span> برنامه نویسی فول
+                        استک</span></h2>
+                <h3 class="font-size-small secend-title_text mid-margin-y ">در چند سال گذشته درگیر یاد
+                    گیری فرانت اند
+                    و بعد از اون بک
+                    اند و
+                    چالش
+                    هایی که تو حوضه فول استک سراغم اومد. <br> هر روز قوی تر از دیروز برای یادگیری
+                    بیشتر<span>&#128170</span></h3>
+                <button class="btn-contact font-size-middle font-regular">ارتباط با من<span>&#11013;</span></button>
+            </div>
+            <div class="section-home-box-profile">
+                <img class="section-home-box-profile-image" src="img/Untitled design (2).png" alt="my image">
+            </div>
+        </div>
         <section id="about" class="section-about section-style animation-fade">
             <h1 class="section-title font-size-larg span-color">
                 <span>د</span>
@@ -85,7 +109,7 @@
                         چالش‌برانگیز ترکیب کنم. اگر موقعیتی دارید که ممکن است مناسب باشد، بیایید ارتباط برقرار کنیم و
                         امکانات را بررسی کنیم!
 
-                        اگر سوال دیگری دارید یا به اطلاعات بیشتری نیاز دارید، خوشحال می‌شوم کمک کنم!</p>
+                        اگر سوال دیگری دارید یا به اطلاعات بیشتری نیاز دارید، خوشحال می‌شوم کمک کنم.</p>
                 </div>
                 <div class="section-about-flex-part-two">
                     <div class="section-about-flex-part-two-title">
