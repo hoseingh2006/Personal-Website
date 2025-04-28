@@ -16,6 +16,7 @@ body {
   direction: rtl;
   background-color: #0f172a;
   padding-bottom: 20px;
+  max-width: 2000px;
 }
 
 .white {
@@ -233,15 +234,11 @@ button {
   color: #6366f1;
 }
 .header-navbar-box-top {
-  position: absolute;
-  top: 0;
-  right: 50%;
-  width: 85%;
+  width: 95%;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transform: translate(50%, 10%);
 }
 .header-navbar-box-logo-image {
   width: 10rem;
@@ -280,8 +277,7 @@ button {
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  padding-top: 10rem;
-  height: 100vh;
+  height: 89vh;
 }
 .section-home-box-title-box {
   display: grid;
