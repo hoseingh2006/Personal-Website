@@ -8,6 +8,54 @@
 
 
     &-navbar {
+        &-mobile {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 0px;
+            background-color: $color-main-gray;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 1.3s;
+
+            &-active {
+                height: max-content;
+            }
+
+            &-ul {
+                margin-top: 8%;
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                align-items: center;
+            }
+
+            &-li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                padding: 1.5vh;
+                width: 100%;
+
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+                }
+
+                &:not(:first-child) {
+                    border-top: 1px solid rgba(255, 255, 255, 0.13);
+                }
+
+
+                & a {
+                    color: $color-white;
+                    text-decoration: none;
+
+                }
+            }
+
+        }
 
         &-humberger {
             &-btn {
@@ -37,7 +85,7 @@
             position: fixed;
             top: 3%;
             left: 50%;
-            padding: 1rem;
+            padding: 2rem;
             display: flex;
             justify-content: center;
             z-index: 999;
@@ -109,18 +157,21 @@
                 // position: absolute;
                 // top: 0;
                 // right: 50%;
-                width: 95%;
+                position: absolute;
+                top: 0;
+                width: 98%;
                 padding: 0 20px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                z-index: 2;
                 // transform: translate(50%, 10%);
             }
 
             &-logo {
                 &-image {
-                    width: 10rem;
-                    height: 10rem;
+                    width: 8rem;
+                    height: 8rem;
                     border-radius: 100%;
                     transition: all 0.3s;
                 }

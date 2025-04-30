@@ -130,7 +130,7 @@ window.addEventListener('resize', checkScreenSize);
 // scroll animation
 
 
-document.querySelectorAll('.header-navbar-static-ul a, .header-navbar-static-ul a').forEach(anchor => {
+document.querySelectorAll('.header-navbar-static-ul a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -164,3 +164,94 @@ document.querySelectorAll('.header-navbar-static-ul a, .header-navbar-static-ul 
         }
     });
 });
+// scroll animation
+document.querySelectorAll('.header-navbar-mobile-li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const targetPosition = targetElement.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 500;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+
+            requestAnimationFrame(animation);
+        }
+    });
+});
+// scroll animation
+document.querySelectorAll('.header-navbar-box-bottom-li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const targetPosition = targetElement.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 500;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+
+            requestAnimationFrame(animation);
+        }
+    });
+});
+
+
+
+
+// ///////
+document.getElementById('header-humberger').addEventListener('click', event => {
+    let cls = document.getElementById('header-navbar-mobile')
+    if (cls.className.includes('header-navbar-mobile-active')) {
+        document.getElementById('header-navbar-mobile').classList.remove('header-navbar-mobile-active')
+    }
+    else {
+        document.getElementById('header-navbar-mobile').classList.add('header-navbar-mobile-active')
+    }
+    window.addEventListener('scroll', event => {
+        if (cls.className.includes('header-navbar-mobile-active')) {
+            document.getElementById('header-navbar-mobile').classList.remove('header-navbar-mobile-active')
+        }
+    })
+
+})
+
